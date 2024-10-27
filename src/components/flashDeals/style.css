@@ -1,0 +1,17 @@
+.flash {
+  background: #f6f9fc;
+  padding: 50px 0;
+}
+.product .img {
+  position: relative;
+  width: 100%;
+  height: 250px; /* Chiều cao của khung ảnh có thể tùy chỉnh theo nhu cầu */
+  overflow: hidden; /* Đảm bảo hình ảnh không tràn ra khỏi khung */
+}
+
+.product .img img {
+  width: 100%; /* Đảm bảo ảnh bao phủ toàn bộ chiều ngang */
+  height: 100%; /* Chiều cao ảnh sẽ điều chỉnh theo chiều cao của khung */
+  object-fit: cover; /* Cắt ảnh vừa với khung mà không làm biến dạng */
+  display: block; /* Đảm bảo rằng ảnh không bị ảnh hưởng bởi các yếu tố inline khác */
+}
