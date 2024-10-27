@@ -1,5 +1,5 @@
 import React from "react"
-import logo from "../../components/assets/images/logo.svg"
+import logo from "../../components/assets/images/logo1.png"
 import { Link } from "react-router-dom"
 
 const Search = ({ CartItem }) => {
