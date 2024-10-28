@@ -1,0 +1,72 @@
+/* Style the user icon */
+.user-icon {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  /* Dropdown hidden by default */
+  .user-icon .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 100;
+    width: 150px;
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  /* Show dropdown when active */
+  .user-icon.active .dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Dropdown list styles */
+  .user-icon .dropdown ul {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+  }
+  
+  .user-icon .dropdown ul li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+  }
+  
+  .user-icon .dropdown ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .user-icon .dropdown ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .user-icon .dropdown ul li a:hover {
+    color: #007bff;
+  }
+  
+  /* Cart Icon styles */
+  .cart {
+    position: relative;
+  }
+  
+  .cart span {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #ff6f61;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 12px;
+  }
+  

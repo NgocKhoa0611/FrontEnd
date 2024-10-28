@@ -1,0 +1,54 @@
+/* UserInfo.css */
+.user-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px; /* Set a max width for the container */
+    padding: 20px; /* Add some padding */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .user-info-form {
+    width: 100%; /* Make form take full width */
+  }
+  
+  .form-group {
+    margin-bottom: 15px; /* Space between form groups */
+  }
+  
+  
+  
+  input[type="text 1"],
+  input[type="email 1"],
+  input[type="file 1"] {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding for inputs */
+    border: 1px solid #ccc; 
+    border-radius: 4px; /* Rounded corners for inputs */
+  }
+  
+  button {
+    padding: 10px 15px; 
+    border: none; 
+    border-radius: 4px; 
+    background-color: #007bff; 
+    
+    cursor: pointer; 
+    font-size: 16px; 
+  }
+  
+  button:hover {
+    background-color: #0056b3; 
+  }
+  
+  .user-image {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    margin-top: 10px; 
+  }
+  
