@@ -89,3 +89,38 @@
   margin-top: 30px;
   height: 130px;
 }
+.checkout-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #7fa5d3;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background-color: #086cf9;
+}
+.go-home-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #e94560;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.go-home-btn:hover {
+  background-color: #c03945;
+}
+
+.home-link {
+  text-decoration: none; /* Xóa đường viền */
+}
+
+

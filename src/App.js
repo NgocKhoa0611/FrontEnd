@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Up
 import Header from "./common/header/Header";
 import Pages from "./pages/Pages";
 import Data from "./components/Data";
-import Cart from "./common/Cart/Cart";
+import Cart from "./common/Cart/Cart"
 import Footer from "./common/footer/Footer";
 import Sdata from "./components/shops/Sdata";
 import AllProducts from "./components/products/products"; 
@@ -14,10 +14,13 @@ import Login from "./common/login/LoginForm";
 import UserInfo from "./common/user/UserInfo";
 
 
+
 function App() {
   const { productItems } = Data;
   const { shopItems } = Sdata;
-  const [CartItem, setCartItem] = useState([]);
+  const [CartItem, setCartItem, ] = useState([]);
+
+
 
   const addToCart = (product) => {
     const productExit = CartItem.find((item) => item.id === product.id);
@@ -31,7 +34,10 @@ function App() {
       setCartItem([...CartItem, { ...product, qty: 1 }]);
     }
   };
-
+//   const removeItem = (id) => {
+//     // Logic để xóa item có id tương ứng khỏi giỏ hàng
+//     setCartItem(prevItems => prevItems.filter(item => item.id !== id));
+// };
   const decreaseQty = (product) => {
     const productExit = CartItem.find((item) => item.id === product.id);
     if (productExit.qty === 1) {
