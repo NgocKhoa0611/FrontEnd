@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css"; // Nhớ import file CSS của bạn
+import axios from "axios";
 
 const Navbar = () => {
   // State to manage the visibility of mobile menu and submenus
   const [MobileMenu, setMobileMenu] = useState(false);
   const [activeSubMenu, setActiveSubMenu] = useState(null); // Track which submenu is open
+  const [Category1, setCategory1] = useState([]);
+  const [Category2, setCategory2] = useState([]);
+  const [Category3, setCategory3] = useState([]);
+  const [Category4, setCategory4] = useState([]);
 
   // Toggle submenu
   const toggleSubMenu = (menuIndex) => {
@@ -15,6 +20,22 @@ const Navbar = () => {
       setActiveSubMenu(menuIndex); // Open selected submenu
     }
   };
+  const fetchCategory = async (categoryId, setState) => {
+    try {
+      const response = await axios.get(`http://localhost:8000/category/${categoryId}`);
+      console.log(`Dữ liệu danh mục ${categoryId}:`, response.data);
+      setState(response.data);
+    } catch (error) {
+      console.error(`Lỗi khi lấy danh mục ${categoryId}:`, error);
+    }
+  };
+
+  useEffect(() => {
+    fetchCategory(1, setCategory1); // Lấy danh mục Áo
+    fetchCategory(2, setCategory2); // Lấy danh mục Quần
+    fetchCategory(3, setCategory3); // Lấy danh mục Phụ kiện
+    fetchCategory(4, setCategory4); // Lấy danh mục Giày
+  }, []);
 
   return (
     <>
@@ -41,9 +62,9 @@ const Navbar = () => {
                 </Link>
                 {activeSubMenu === 2 && (
                   <ul className="submenu">
-                    <li><Link to="/sanpham/ao">Áo thun</Link></li>
-                    <li><Link to="/sanpham/somi">Áo sơ mi</Link></li>
-                    <li><Link to="/sanpham/aokhoac">Áo khoác</Link></li>
+                    {Category1.map((item) => (
+                      <li><Link to={""}>{item.category_name}</Link></li>
+                    ))}
                   </ul>
                 )}
               </li>
@@ -53,9 +74,9 @@ const Navbar = () => {
                 </Link>
                 {activeSubMenu === 3 && (
                   <ul className="submenu">
-                    <li><Link to="/sanpham/quantay">Quần tây</Link></li>
-                    <li><Link to="/sanpham/quandui">Quần đùi</Link></li>
-                    <li><Link to="/sanpham/quanjean">Quần jean</Link></li>
+                    {Category2.map((item) => (
+                      <li><Link to={""}>{item.category_name}</Link></li>
+                    ))}
                   </ul>
                 )}
               </li>
@@ -65,10 +86,10 @@ const Navbar = () => {
                 </Link>
                 {activeSubMenu === 4 && (
                   <ul className="submenu">
-                    <li><Link to="/sanpham/non">Nón</Link></li>
-                    <li><Link to="/sanpham/dongho">Đồng hồ</Link></li>
-                    <li><Link to="/sanpham/tuibalo">Túi sách/Balo</Link></li>
-                    </ul>
+                    {Category3.map((item) => (
+                      <li><Link to={""}>{item.category_name}</Link></li>
+                    ))}
+                  </ul>
                 )}
               </li>
               <li>
@@ -77,10 +98,10 @@ const Navbar = () => {
                 </Link>
                 {activeSubMenu === 4 && (
                   <ul className="submenu">
-                    <li><Link to="/sanpham/ao">Thể thao</Link></li>
-                    <li><Link to="/sanpham/quan">Giày tây</Link></li>
-                    <li><Link to="/sanpham/phukien">Cao gót</Link></li>
-                    </ul>
+                    {Category4.map((item) => (
+                      <li><Link to={""}>{item.category_name}</Link></li>
+                    ))}
+                  </ul>
                 )}
               </li>
               <li>

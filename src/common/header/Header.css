@@ -138,7 +138,7 @@
 }
 
 .submenu li a {
-  padding: 5px 10px; /* Khoảng cách cho các liên kết trong submenu */
+  padding: 5px 8px; /* Khoảng cách cho các liên kết trong submenu */
   color: #333333; /* Màu chữ trong submenu */
   transition: color 0.3s; /* Hiệu ứng chuyển màu chữ */
   background: transparent; /* Loại bỏ nền của các mục trong submenu */
