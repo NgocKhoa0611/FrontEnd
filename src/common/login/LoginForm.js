@@ -128,7 +128,7 @@ const LoginForm = () => {
       </div>
       {error && <div className="error-message">{error}</div>}
       {message && <div className="success-message">{message}</div>}
-      <div className="forgot-password">Lost Password? <span>Click here!</span></div>
+      <div className="forgot-password">Mất mật khẩu?<span>Bấm vào đây!</span></div>
       <div className="submit-container">
         <div className="submit" onClick={handleSubmit}>
           {action}
@@ -136,9 +136,9 @@ const LoginForm = () => {
       </div>
       <div className="switch-mode">
         {action === "Sign Up" ? (
-          <span onClick={() => setAction("Login")}>Already have an account? Login here.</span>
+          <span onClick={() => setAction("Login")}>Bạn đã có tài khoản? Đăng nhập tại đây.</span>
         ) : (
-          <span onClick={() => setAction("Sign Up")}>Don't have an account? Sign up here.</span>
+          <span onClick={() => setAction("Sign Up")}>Bạn chưa có tài khoản? Đăng ký tại đây.</span>
         )}
       </div>
     </div>

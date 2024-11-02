@@ -198,7 +198,7 @@ button {
   top: 40%;
   width: 50px;
   height: 50px;
-  line-height: 60px;
+  /* line-height: 60px; */
   background: #0f3460;
   border-radius: 50%;
   transform: 0.5s;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './UserInfo.css'; 
+import './UserInfo.css';
 
 function UserInfo() {
   const initialUser = JSON.parse(localStorage.getItem("user")) || { username: "", phone: "", email: "", image: "", address: "" };
@@ -77,7 +77,7 @@ function UserInfo() {
         <div className="form-group">
           <label>Hình ảnh:</label>
           <input
-            type="file 1"
+            type="file"
             accept="image/*"
             onChange={handleImageChange}
           />

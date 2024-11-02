@@ -1,15 +1,16 @@
 import React from "react"
-import Categories from "./Categories"
 import "./Home.css"
-import SliderHome from "./Slider"
+import bannerImage from "../assets/images/Fashionvers.png";
 
 const Home = () => {
   return (
     <>
       <section className='home'>
         <div className='container d_flex'>
-          <Categories />
-          <SliderHome />
+          {/* Banner Image */}
+          <div className='banner'>
+            <img src={bannerImage} alt='Banner' />
+          </div>
         </div>
       </section>
     </>

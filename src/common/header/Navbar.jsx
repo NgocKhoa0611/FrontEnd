@@ -84,10 +84,10 @@ const Navbar = () => {
                 )}
               </li>
               <li>
-                <Link to="#">Về chúng tôi</Link>
+                <Link to="/contact">Liên Hệ</Link>
               </li>
               <li>
-                <Link to="/contact">Liên Hệ</Link>
+                <Link to="#">Đơn Hàng</Link>
               </li>
             </ul>
 
